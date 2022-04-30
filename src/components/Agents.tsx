@@ -25,13 +25,11 @@ const Agents = ({ collection }: { collection?: AgentCollection}) => {
 
   return (
     <Frame>
-      <>
-        <Filter filterStatus={filterStatus} setFilterStatus={setFilterStatus} />
-        {!!collection
-          ? <>{agents.map((agent: Agent) => <AgentCard key={`${agent.first_name} ${agent.last_name}`} agent={agent} />)}</>
-          : <Spinner />
-        }
-      </>
+      <Filter filterStatus={filterStatus} setFilterStatus={setFilterStatus} />
+      {!!collection
+        ? <>{agents.map((agent: Agent) => <AgentCard key={`${agent.first_name} ${agent.last_name}`} agent={agent} />)}</>
+        : <Spinner />
+      }
     </Frame>
   )
 }
