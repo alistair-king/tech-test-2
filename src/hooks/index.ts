@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import { Agent, AgentCollection } from '../types'
+import { AgentCollection } from '../types'
 
 const useAgents = (url: RequestInfo): AgentCollection | undefined => {
   const [collection, setCollection] = useState<AgentCollection>()
